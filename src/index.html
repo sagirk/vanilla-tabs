@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="screen.css">
+        <script src="main.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <ul class="row" id="tabs">
+            <li class="tab" id="days-of-the-week-tab">Days of the week</li>
+            <li class="tab" id="date-picker-tab">Date picker</li>
+            <li class="tab" id="user-input-tab">User input</li>
+        </ul>
+
+        <div class="row" id="tab-content"></div>
+
+        <div class="row">
+            <input type="submit" value="Run" id="run">
+            <!-- final format: MON,TUE,FRI or 05/12/2011 -->
+            <input type="text" value="" id="result" placeholder="Result">
+        </div>
+
+        <div class="templates">
+            <div class="tab-pane" id="days-of-the-week">
+                <input type="checkbox" value="MON"> Monday
+                <input type="checkbox" value="TUE"> Tuesday
+                <input type="checkbox" value="WED"> Wednesday
+                <input type="checkbox" value="THU"> Thursday
+                <input type="checkbox" value="FRI"> Friday
+                <input type="checkbox" value="SAT"> Saturday
+                <input type="checkbox" value="SUN"> Sunday
+            </div>
+            <div class="tab-pane" id="date-picker">
+                <input type="hidden" value="" id="date">
+                <select id="day"></select>
+                <select id="month"></select>
+                <select id="year"></select>
+            </div>
+            <div class="tab-pane" id="user-input">
+                <!-- parse it to fields above -->
+                <input type="text" value="" id="input">
+            </div>
+        </div>
+    </body>
+</html>
