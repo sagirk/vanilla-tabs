@@ -1,46 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" type="text/css" href="screen.css">
-        <script src="main.js" type="text/javascript" charset="utf-8"></script>
-    </head>
-    <body>
-        <ul class="row" id="tabs">
-            <li class="tab" id="days-of-the-week-tab">Days of the week</li>
-            <li class="tab" id="date-picker-tab">Date picker</li>
-            <li class="tab" id="user-input-tab">User input</li>
-        </ul>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vanilla Tabs</title>
+    <link rel="stylesheet" href="screen.css">
+  </head>
 
-        <div class="row" id="tab-content"></div>
+  <body class="boxed-layout">
+    <ul class="tabs">
+      <li><a class="tab" href="#days-of-the-week">Days of the week</a></li>
+      <li><a class="tab" href="#date-picker">Date picker</a></li>
+      <li><a class="tab" href="#user-input">User input</a></li>
+    </ul>
 
-        <div class="row">
-            <input type="submit" value="Run" id="run">
-            <!-- final format: MON,TUE,FRI or 05/12/2011 -->
-            <input type="text" value="" id="result" placeholder="Result">
-        </div>
+    <div class="panel with-justified-padding" id="days-of-the-week">
+      <div class="day">
+        <input class="check-day" id="monday" type="checkbox" value="MON">
+        <label class="day-label" for="monday">Monday</label>
+      </div>
+      <div class="day">
+        <input class="check-day" id="tuesday" type="checkbox" value="TUE">
+        <label class="day-label" for="tuesday">Tuesday</label>
+      </div>
+      <div class="day">
+        <input class="check-day" id="wednesday" type="checkbox" value="WED">
+        <label class="day-label" for="wednesday">Wednesday</label>
+      </div>
+      <div class="day">
+        <input class="check-day" id="thursday" type="checkbox" value="THU">
+        <label class="day-label" for="thursday">Thursday</label>
+      </div>
+      <div class="day">
+        <input class="check-day" id="friday" type="checkbox" value="FRI">
+        <label class="day-label" for="friday">Friday</label>
+      </div>
+      <div class="day">
+        <input class="check-day" id="saturday" type="checkbox" value="SAT">
+        <label class="day-label" for="saturday">Saturday</label>
+      </div>
+      <div class="day">
+        <input class="check-day" id="sunday" type="checkbox" value="SUN">
+        <label class="day-label" for="sunday">Sunday</label>
+      </div>
+    </div>
 
-        <div class="templates">
-            <div class="tab-pane" id="days-of-the-week">
-                <input type="checkbox" value="MON"> Monday
-                <input type="checkbox" value="TUE"> Tuesday
-                <input type="checkbox" value="WED"> Wednesday
-                <input type="checkbox" value="THU"> Thursday
-                <input type="checkbox" value="FRI"> Friday
-                <input type="checkbox" value="SAT"> Saturday
-                <input type="checkbox" value="SUN"> Sunday
-            </div>
-            <div class="tab-pane" id="date-picker">
-                <input type="hidden" value="" id="date">
-                <select id="day"></select>
-                <select id="month"></select>
-                <select id="year"></select>
-            </div>
-            <div class="tab-pane" id="user-input">
-                <!-- parse it to fields above -->
-                <input type="text" value="" id="input">
-            </div>
-        </div>
-    </body>
+    <div class="panel" id="date-picker">
+      <div class="date-picker-column">
+        <label class="date-picker-label" for="date">Date</label>
+        <select class="date-picker-input" id="date"></select>
+      </div>
+      <div class="date-picker-column">
+        <label class="date-picker-label" for="month">Month</label>
+        <select class="date-picker-input" id="month"></select>
+      </div>
+      <div class="date-picker-column">
+        <label class="date-picker-label" for="year">Year</label>
+        <select class="date-picker-input" id="year"></select>
+      </div>
+    </div>
+
+    <div class="panel" id="user-input">
+      <input class="text-input" id="input" type="text" value="">
+    </div>
+
+    <div class="output">
+      <div class="run-column">
+        <button class="run-button" id="run" type="button">Run</button>
+      </div>
+      <div class="result-column">
+        <input class="text-input readonly" id="result" type="text" value="" placeholder="Result" readonly>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>

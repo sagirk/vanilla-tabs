@@ -1,63 +1,137 @@
-/****************************************************************************
- * Shared Components                                                        *
- ****************************************************************************/
-/* div, ul {
-    border: 1px dotted red;
-} */
-
-body {
-    font-size: 18px;
+/* ------------------------------------------------------------------------ *
+ * Shared                                                                   *
+ * ------------------------------------------------------------------------ */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: helvetica, sans-serif;
 }
 
-.row {
-    margin: 5px 0;
-    padding: 1px;
-    width: 795px;
+.boxed-layout {
+  width: 800px;
+  margin: 20px auto;
 }
 
-.templates {
-    display: none;
+.date-picker-input,
+.text-input {
+  font-size: 16px;
+  color: #444;
+  border: 1px solid #ccc;
 }
 
-/****************************************************************************
+.text-input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------------ *
  * Tabs                                                                     *
- ****************************************************************************/
-#tabs {
-    list-style: none;
-    text-align: center;
+ * ------------------------------------------------------------------------ */
+.tabs {
+  margin-bottom: 10px;
+  overflow: hidden;
+  list-style: none;
 }
 
 .tab {
-    line-height: 2;
-    width: 250px;
-    margin: 0px;
-    padding: 5px;
-    display: inline-block;
-    cursor: pointer;
-    background-color: #e1e1e1;
-    border: 1px solid #666666;
+  float: left;
+  padding: 10px;
+  margin-right: 10px;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  transition: all .15s ease-out;
 }
 
-/****************************************************************************
- * Tab Content                                                              *
- ****************************************************************************/
-input[type="checkbox"] {
-    margin: 14px;
+.tab:hover {
+  color: #fff;
+  background: #000;
+  border-color: #000;
 }
 
-select {
-    margin: 11px;
+.tab.active {
+  color: #000;
+  background: #ccc;
+  border-color: #ccc;
 }
 
-input {
-    padding: 6px;
-    margin: 5px;
+/* ------------------------------------------------------------------------ *
+ * Tab Panels                                                               *
+ * ------------------------------------------------------------------------ */
+.panel {
+  padding: 20px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
 }
 
-input[type="submit"] {
-    font-size: 16px;
+/* Days Of The Week ------------------------------------------------------- */
+.with-justified-padding {
+  padding-top: 27px;
+  padding-bottom: 27px;
 }
 
-.tab-pane {
-    background-color: #e1e1e1;
+.day {
+  display: inline;
+  margin-right: 31px;
+}
+
+.check-day {
+  margin-right: 2px;
+}
+
+.day-label {
+  position: relative;
+  top: 1px;
+}
+
+/* Date Picker ------------------------------------------------------------ */
+.date-picker-column {
+  display: inline-block;
+  width: 32%;
+  margin-right: 11px;
+}
+
+.date-picker-column:last-child {
+  margin: 0;
+}
+
+.date-picker-label {
+  margin-right: 4px;
+}
+
+.date-picker-input {
+  width: 78%;
+  height: 32px;
+  background-color: #fff;
+}
+
+/* Result ----------------------------------------------------------------- */
+.output {
+  padding: 10px 0;
+}
+
+.run-column {
+  display: inline-block;
+  width: 9.4%;
+}
+
+.run-button {
+  padding: 6px 12px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #444;
+  border: 1px solid transparent;
+}
+
+.result-column {
+  display: inline-block;
+  width: 90%;
+}
+
+.text-input.readonly {
+  background-color: #eee;
+  border: solid transparent;
 }

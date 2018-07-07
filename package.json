@@ -1,0 +1,38 @@
+{
+  "name": "vanilla-tabs",
+  "description": "A zero-dependency, vanilla JavaScript, URI fragment-driven tabbing system",
+  "version": "0.1.0",
+  "keywords": [
+    "zero-dependency",
+    "vanilla-javascript",
+    "uri-fragments",
+    "tabs",
+    "tabbing-system"
+  ],
+  "homepage": "https://github.com/sagirk/vanilla-tabs",
+  "author": "Sagir Khan (https://github.com/sagirk)",
+  "scripts": {
+    "lint": "npm run lint-js && npm run lint-css && npm run lint-html && npm run lint-md",
+    "lint-js": "eslint src/*.js; exit 0",
+    "lint-css": "stylelint src/*.css; exit 0",
+    "lint-html": "htmllint src/*.html; exit 0",
+    "lint-md": "markdownlint *.md; exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagirk/vanilla-tabs.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "htmllint-cli": "0.0.7",
+    "markdownlint-cli": "^0.10.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-scss": "^3.1.3"
+  }
+}
